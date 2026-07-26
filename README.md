@@ -1,90 +1,83 @@
-# FitGirl FuckingFast Link Extractor (Pro)
+# FitGirl Repack Link Extractor Pro
 
-A fast, lightweight, and user-friendly desktop application built in Python (Tkinter) to retrieve, categorize, filter, and extract direct download links from FuckingFast hosters on FitGirl Repack pages (fitgirl-repacks.site).
+FitGirl Repack Link Extractor Pro is the ultimate lightweight, high-performance desktop GUI tool designed to retrieve, categorize, filter, and extract direct download links from FuckingFast hosters on FitGirl Repack pages (`fitgirl-repacks.site`).
 
----
-
-## Descripcion en Espanol
-
-Una herramienta de escritorio rapida y liviana desarrollada en Python para extraer, categorizar, filtrar y obtener los enlaces directos de descarga desde hosters de FuckingFast en las paginas de FitGirl Repacks.
-
-### Caracteristicas Principales
-- Obtencion y Clasificacion Automatica: Extrae las partes y las agrupa automaticamente en secciones desplegables (Binarios Principales, Paquetes de Idioma por pais/idioma, Contenido Bonus, etc.).
-- Soporte Multilingue (Espanol / Ingles): Selector de idioma integrado en la interfaz.
-- Navegacion Fluida por Teclado:
-  - Flechas (Arriba / Abajo): Navega de forma inteligente por la lista con resalte visual en azul.
-  - Barra Espaciadora: Marca o desmarca la parte enfocada.
-  - Clic de Raton: Sincroniza la navegacion para continuar desde el elemento clickeado.
-- Buscador en Tiempo Real y Presets:
-  - Filtrado instantaneo por texto.
-  - Botones de seleccion rapida (Seleccionar Todo, Deseleccionar Todo, Solo Binarios Principales, Invertir Seleccion).
-- Compatibilidad Instantanea con JDownloader 2 e IDM:
-  - Al copiar los enlaces al portapapeles, incluye automaticamente el nombre del archivo (#fg-01.bin), lo que permite que JDownloader 2 e IDM los reconozcan inmediatamente sin realizar escaneos profundos.
-- Bypass Automatico de Cloudflare Turnstile:
-  - Utiliza undetected-chromedriver para superar los desafios de seguridad de Cloudflare sin intervencion manual.
-  - Instalacion automatica en segundo plano si la dependencia no se encuentra en el sistema.
-- Control de Detencion (Stop): Permite cancelar la extraccion en cualquier momento.
+Built for speed and ease of use, it automatically bypasses Cloudflare Turnstile security checks, categorizes repack files by language and main setup binaries, and formats extracted URLs for instant auto-detection in JDownloader 2, IDM (Internet Download Manager), and Free Download Manager.
 
 ---
 
-## English Description
+## Key Features
 
-A fast and lightweight desktop GUI application built in Python to retrieve, group, filter, and extract direct download URLs from FuckingFast hosters on FitGirl Repack pages.
-
-### Key Features
-- Automated Parsing & Categorization: Groups links into collapsible accordion sections (Core Binaries, Language Packs by country/language, Bonus Content, etc.).
-- Multilingual UI (Spanish / English): Built-in language selector.
-- Fluid Keyboard Navigation:
-  - Arrow Keys (Up / Down): Smooth navigation with a distinct blue highlight.
-  - Spacebar: Toggle checkbox on the focused item.
-  - Mouse Click Sync: Seamlessly continues keyboard navigation from any clicked item.
-- Real-time Search & Presets:
-  - Live filter as you type.
-  - Quick presets (Select All, Deselect All, Main Binaries Only, Invert Selection).
-- Instant JDownloader 2 & IDM Clipboard Auto-Detection:
-  - Copied URLs automatically append #filename (#fg-01.bin), allowing JDownloader 2 & IDM to grab them immediately without deep crawling.
-- Automated Cloudflare Turnstile Bypass:
-  - Powered by undetected-chromedriver to bypass Turnstile checks cleanly.
-  - Automatic background dependency installer if missing.
-- Stop Control: Interrupt long extraction tasks instantly.
+- **Automated Categorization**: Automatically separates Core Repack Binaries (`setup.exe`, `fg-01.bin`, `fg-part1.rar`) from optional language packs (Spanish, English, German, French, Italian, Japanese, Polish, Russian, Chinese, Portuguese) and bonus content.
+- **Instant JDownloader 2 & IDM Auto-Detection**: Extracted links append file anchor hashes (`#fg-01.bin`), allowing download managers to immediately recognize file extensions and queue downloads without deep crawling.
+- **Cloudflare Turnstile Bypass**: Powered by `undetected-chromedriver` to pass Turnstile checks seamlessly.
+- **Bilingual Interface**: Full support for **English** and **Spanish (Español)** UI text and category headers.
+- **Keyboard Navigation**: Navigate the checklist with Arrow Keys (Up/Down) with a distinct blue highlight, toggle items with Spacebar, and sync focus from mouse clicks.
+- **Real-Time Live Search**: Instantly filter files by typing in the search bar.
+- **Quick Selection Presets**: Select All, Deselect All, Main Binaries Only, and Invert Selection.
+- **Stop Control**: Cancel extraction operations at any time without freezing the app.
+- **Single Standalone Executable**: No Python installation required when using the pre-compiled `.exe`.
 
 ---
 
-## Installation & Running / Instalacion y Uso
+## Downloads (Pre-Compiled Executable)
 
-### Prerequisites / Requisitos
-- Python 3.8+ installed on Windows, Linux, or macOS.
+Download the latest standalone Windows executable from the Releases section:
+- **`FitGirl_Link_Extractor_Pro.exe`** (Single-file portable executable)
 
-### Steps / Pasos
+---
 
-1. Clone the repository / Clonar el repositorio:
+## Running from Source
+
+### Requirements
+- Python 3.8 or higher
+- `requests`
+- `beautifulsoup4`
+- `undetected-chromedriver` (Auto-installed if missing)
+
+### Quick Start
+1. Clone this repository:
    ```bash
    git clone https://github.com/zouhirdev/fitgirl-ff-link-extractor.git
    cd fitgirl-ff-link-extractor
    ```
 
-2. Install dependencies / Instalar dependencias:
+2. Install requirements:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Run the application / Ejecutar la aplicacion:
+3. Launch the application:
    ```bash
    python ff_grabber.py
    ```
 
 ---
 
-## Configuration & Dependencies / Configuracion y Dependencias
+## Keyboard Shortcuts
 
-- `requirements.txt`:
-  - `requests`
-  - `beautifulsoup4`
-  - `undetected-chromedriver` (Optional, auto-installed if missing)
-- `config.json`: Automatically saves your last used FitGirl URL, browser choice, and UI language selection.
+| Shortcut | Action |
+| --- | --- |
+| **Down Arrow** | Move focus to next link item |
+| **Up Arrow** | Move focus to previous link item |
+| **Spacebar** | Check / Uncheck focused link item |
+| **Mouse Click** | Focus clicked link and sync arrow navigation |
 
 ---
 
-## License / Licencia
+## SEO & Frequently Asked Questions (FAQ)
 
-MIT License. Free to use and modify.
+### What is FitGirl Repack Link Extractor Pro?
+FitGirl Repack Link Extractor Pro is a open-source desktop link grabber utility designed specifically to parse and extract direct download links from FuckingFast mirrors on `fitgirl-repacks.site`.
+
+### How does it bypass Cloudflare Turnstile?
+The application uses stealth browser automation (`undetected-chromedriver`) to solve Cloudflare Turnstile challenges automatically without user intervention.
+
+### How do I import links into JDownloader 2?
+Simply click **Copy All Links** or **Copiar Todos los Enlaces** in the app. JDownloader 2 automatically detects the formatted direct download links from your clipboard.
+
+---
+
+## License
+
+Distributed under the MIT License. Free for personal and community use.

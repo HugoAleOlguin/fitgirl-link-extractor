@@ -31,6 +31,7 @@ CONFIG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "config.j
 # I18N Translations Dictionary
 TRANSLATIONS = {
     "English": {
+        "app_title": "FitGirl Repack Link Extractor Pro",
         "url_label": "FitGirl Game URL:",
         "fetch_btn": "1. Fetch Links",
         "extract_btn": "2. Extract Selected",
@@ -71,6 +72,7 @@ TRANSLATIONS = {
         "msg_no_links": "No links found to process."
     },
     "Español": {
+        "app_title": "FitGirl Repack Link Extractor Pro",
         "url_label": "URL del juego en FitGirl:",
         "fetch_btn": "1. Obtener Enlaces",
         "extract_btn": "2. Extraer Seleccionados",
@@ -165,7 +167,7 @@ def categorize_link(link, lang="English"):
 class FitgirlExtractorApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("FitGirl FF Link Extractor (Pro)")
+        self.root.title("FitGirl Repack Link Extractor Pro")
         self.root.geometry("820x860")
         self.root.minsize(680, 700)
 
@@ -263,6 +265,7 @@ class FitgirlExtractorApp:
         self.retranslate_ui()
 
     def retranslate_ui(self):
+        self.root.title(self.t("app_title"))
         self.url_label.config(text=self.t("url_label"))
         self.fetch_btn.config(text=self.t("fetch_btn"))
         self.extract_btn.config(text=self.t("extract_btn"))
@@ -299,7 +302,6 @@ class FitgirlExtractorApp:
         options_frame = ttk.Frame(input_frame)
         options_frame.grid(row=2, column=2, sticky="e")
 
-        # Language Selector Combobox
         self.lang_var = tk.StringVar(value=self.lang)
         self.lang_combo = ttk.Combobox(options_frame, textvariable=self.lang_var, state="readonly", width=10)
         self.lang_combo['values'] = ("English", "Español")
@@ -694,7 +696,6 @@ class FitgirlExtractorApp:
             title_lbl = ttk.Label(hdr_frame, text=f"{cat_name} ({len(cat_links)})", font=("Arial", 9, "bold"))
             title_lbl.pack(side="left", padx=2)
 
-            # Flexible padding buttons without truncating fixed widths
             sec_select_btn = ttk.Button(hdr_frame, text=self.t("select_all"), padding=(4, 1))
             sec_select_btn.pack(side="right", padx=2)
 
