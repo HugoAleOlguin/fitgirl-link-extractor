@@ -1,4 +1,4 @@
-setuptools
 requests
 beautifulsoup4
-undetected-chromedriver
+# Optional (for Cloudflare Turnstile bypass fallback):
+# undetected-chromedriver
